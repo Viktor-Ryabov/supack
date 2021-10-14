@@ -15,6 +15,7 @@ const headerLogo = document.querySelector(".header__logoButtonLink");
 const closeIcon = document.querySelector(".header__closeIcon");
 
 
+
 function addClassList(element, newClassList) {
   element.classList.add(newClassList);
 }
@@ -70,3 +71,24 @@ function goToBlock(button, position){
 goToBlock(singUpButton1, 999999999);
 goToBlock(logo, 0);
 goToBlock(firstBlockButton, 99999999);
+
+const link1 = document.querySelector("#link1 ");
+console.log(link1)
+const link2 = document.querySelector("#link2 ");
+const link3 = document.querySelector("#link3");
+
+
+function closeMenu(object){
+  object.addEventListener("click", function(){
+    removeClassList(closeIcon, "header__closeIcon_open");
+    removeClassList(headerLogo, "header__logoButtonLink_open");
+    removeClassList(listMenu, "header__list_open");
+    removeClassList(header, "header_phoneSize");
+    removeClassList(burgerMenuButton, "effects_notVisible");
+    removeClassList(mainMenuBlock, "effects_visible");
+    removeClassList(colseIconHeader, "effects_visible");
+  });
+}
+closeMenu(link1);
+closeMenu(link2);
+closeMenu(link3);
