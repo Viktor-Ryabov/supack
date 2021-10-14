@@ -3,6 +3,7 @@ const mainMenuBlock = document.querySelector(".header__list");
 const logo = document.querySelector(".header__logoButton");
 const colseIconHeader = document.querySelector("#colseIconHeader");
 const header = document.querySelector(".header");
+const firstBlockButton = document.querySelector("#firstBlockButton");
 
 const subscribeInput = document.querySelector("#singUpInput");
 const singUpButton = document.querySelector("#singUpButton");
@@ -47,10 +48,10 @@ function colseHeaderMenu(button) {
 }
 colseHeaderMenu(colseIconHeader);
 
-function addInputListener(input) {
-  input.addEventListener("click", () => (input.value = ""));
-}
-addInputListener(subscribeInput);
+// function addInputListener(input) {
+//   input.addEventListener("click", () => (input.value = ""));
+// }
+// addInputListener(subscribeInput);
 
 function sendEmailForSubscribe(button, input) {
   button.addEventListener("click", function () {
@@ -59,12 +60,13 @@ function sendEmailForSubscribe(button, input) {
   });
 }
 
-sendEmailForSubscribe(singUpButton, subscribeInput);
+// sendEmailForSubscribe(singUpButton, subscribeInput);
 
-function goToSingUpBlock(button){
+function goToBlock(button, position){
   button.addEventListener("click", function(){
-    window.scrollTo( 0, 9991000 );
+    window.scrollTo( 0, position );
   });
 }
-goToSingUpBlock(singUpButton1);
-goToSingUpBlock(singUpButton2);
+goToBlock(singUpButton1, 999999999);
+goToBlock(logo, 0);
+goToBlock(firstBlockButton, 99999999);

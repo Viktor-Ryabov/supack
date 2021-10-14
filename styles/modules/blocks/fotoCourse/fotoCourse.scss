@@ -17,7 +17,7 @@
     line-height: 110px;
     grid-area: title;
     color: $blackColor;
-    width: 80%;
+    width: 70%;
   }
 
   &__text {
@@ -29,7 +29,7 @@
     max-width: 469px;
   }
   &__text2 {
-    @include MarginPadding($margin: 0 0 170px 54px);
+    @include MarginPadding($margin: 0 0 134px 54px);
     @include fontRegular(20px);
     color: $blackColor;
     line-height: 118%;
@@ -42,12 +42,16 @@
     @include fontRegular(18px);
     @include flex($justify: center, $alignItems: center);
     @include buttonDesctopStyle;
+    background-color: $redColor;
+    color: $whiteColor;
+    border-radius: 2px solid $whiteColor;
+
     grid-area: button;
   }
   &__foto {
     @include MarginPadding($margin: 50px 50px 50px 0);
     grid-area: foto;
-    width: 80%;
+    max-width: calc(100% - 50px);
   }
 }
 

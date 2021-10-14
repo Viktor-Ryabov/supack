@@ -5,6 +5,7 @@
   @include MarginPadding;
   width: 100%;
   background-color: $redColor;
+  padding-bottom: 50px;
   @include screen1440px {
     @include tableSectionFlex;
   }
@@ -28,7 +29,7 @@
   &__h2 {
     @include MarginPadding($margin: 50px 0 120px 0);
     @include fontRegular(120px, 120px);
-    max-width: 685px;
+    max-width: 70%;
     color: $whiteColor;
   }
   &__inputs {
@@ -66,9 +67,12 @@
     }
   }
   &__since {
-    @include MarginPadding($margin: 0 auto 50px 50px);
-    @include fontRegular(15px, 24px);
+    @include MarginPadding($margin: 0 auto 0 50px);
+    @include fontRegular(25px, 34px);
     color: $whiteColor;
+    &:last-of-type{
+      @include MarginPadding($margin: 20px auto 0 50px);
+    }
   }
 }
 
@@ -80,11 +84,14 @@
       @include tabletTitle;
       font-size: 100px;
       line-height: 100px;
-      max-width: 571px;
+      max-width: 70%;
     }
     &__since {
-      margin: 0 0 40px 40px;
+      margin: 0 0 0 40px;
       align-self: flex-start;
+      &:last-of-type{
+        @include MarginPadding($margin: 10px 0 0 40px);
+      }
     }
     &__button {
       @include tabletButton;
@@ -109,9 +116,16 @@
       border-top: white solid 1px;
       @include fontRegular($fontSize: 48px, $lineHeigth: 50px);
       @include MarginPadding($margin: 0 20px 270px 20px, $padding: 20px 0 0 0);
+      max-width: 100%;
     }
     &__since {
-      @include phoneText;
+      margin: 0 0 0 20px;
+      align-self: flex-start;
+      &:last-of-type{
+        @include MarginPadding($margin: 10px 0 0 20px);
+      }
+      @include fontRegular(15px, 24px);
+
     }
     &__inputs {
       @include MarginPadding;

@@ -4,15 +4,13 @@
 .camera {
   @include MarginPadding;
   width: 100%;
-  background-color: $blackColor;
+  background-color: $oceanicColor;
   display: grid;
   grid-template-areas:
-    "blockName foto"
-    "title foto"
-    "link foto"
-    "feedback1 feedback2"
-    "name1 name2"
-    "mail1 mail2";
+    "foto blockName"
+    "foto title "
+    "foto link"
+    "feedback1 feedback2";
   &__blockName {
     @include MarginPadding($margin: 50px 0 50px 54px);
     @include fontRegular(18px, 28px);
@@ -36,8 +34,9 @@
     text-transform: uppercase;
   }
   &__foto {
-    @include MarginPadding($margin: 50px 50px 50px 0);
+    @include MarginPadding($margin: 50px 0 50px 50px);
     grid-area: foto;
+    max-width: Calc(100% - 50px);
   }
   &__feedbackText {
     @include MarginPadding($margin: 0 0 60px 50px);
@@ -49,7 +48,7 @@
       grid-area: feedback1;
     }
     &_2 {
-      @include MarginPadding($margin: 0 auto 60px 0);
+      @include MarginPadding($margin: 0 auto 60px 50px);
       max-width: 497px;
       grid-area: feedback2;
     }
@@ -82,6 +81,7 @@
 
 @media (max-width: 1440px) {
   .camera {
+    padding-bottom: 40px;
     @include tableSectionFlex;
     &__blockName {
       @include tabletBlockName;
@@ -95,12 +95,12 @@
     &__feedbackText {
       &_1 {
         @include tableText;
-        max-width: 526px;
+        max-width: 75%;
         margin-left: 40px;
       }
       &_2{
         @include tableText;
-        max-width: 526px;
+        max-width: 75%;
         margin-left: 40px;
       }
     }
@@ -141,6 +141,7 @@
 
 @media (max-width: 700px) {
   .camera {
+    padding-bottom: 40px;
     max-width: 100%;
     &__blockName {
       @include phoneBlockName;

@@ -2,7 +2,7 @@
 @import "../../mixins/mixins.scss";
 
 .studyComposition {
-  @include MarginPadding;
+  @include MarginPadding($padding: 0 0 40px 0);
   max-width: 100%;
   background-color: $yellowColor;
   display: grid;
@@ -21,9 +21,9 @@
     text-transform: uppercase;
   }
   &__title {
-    @include MarginPadding($margin: 0 292px 100px 50px);
-    @include fontRegular(64px, 64px);
-    max-width: 400px;
+    @include MarginPadding($margin: 0 24px 100px 50px);
+    @include fontRegular(55px, 60px);
+    max-width: 650px;
     grid-area: title;
     color: $blackColor;
   }
@@ -57,6 +57,7 @@
   &__foto {
     @include MarginPadding($margin: 50px 50px 0 0);
     grid-area: foto;
+    max-width: calc(100% - 50px);
   }
   &__rules {
     @include MarginPadding($margin: 100px 54px 50px 54px);
@@ -125,6 +126,7 @@
     &__title {
       @include phoneTitile;
       @include fontRegular(30px, 38px);
+      max-width: calc(100% - 40px);
 
     }
     &__text {

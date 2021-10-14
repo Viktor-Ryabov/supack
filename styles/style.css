@@ -205,7 +205,7 @@
   line-height: 110px;
   grid-area: title;
   color: #000000;
-  width: 80%;
+  width: 70%;
 }
 .fotoCourse__text {
   margin: 0 0 20px 54px;
@@ -219,7 +219,7 @@
   max-width: 469px;
 }
 .fotoCourse__text2 {
-  margin: 0 0 170px 54px;
+  margin: 0 0 134px 54px;
   padding: 0;
   font-family: "Roboto_regular";
   font-size: 20px;
@@ -253,6 +253,9 @@
   height: 49px;
   border: 1px solid #000000;
   border-radius: 24.5px;
+  background-color: #CE5A57;
+  color: #FFFFFF;
+  border-radius: 2px solid #FFFFFF;
   grid-area: button;
 }
 .fotoCourse__button:hover {
@@ -264,7 +267,7 @@
   margin: 50px 50px 50px 0;
   padding: 0;
   grid-area: foto;
-  width: 80%;
+  max-width: calc(100% - 50px);
 }
 
 @media (max-width: 1440px) {
@@ -333,7 +336,7 @@
 }
 .studyComposition {
   margin: 0;
-  padding: 0;
+  padding: 0 0 40px 0;
   max-width: 100%;
   background-color: #E1B16A;
   display: grid;
@@ -350,12 +353,12 @@
   text-transform: uppercase;
 }
 .studyComposition__title {
-  margin: 0 292px 100px 50px;
+  margin: 0 24px 100px 50px;
   padding: 0;
   font-family: "Roboto_regular";
-  font-size: 64px;
-  line-height: 64px;
-  max-width: 400px;
+  font-size: 55px;
+  line-height: 60px;
+  max-width: 650px;
   grid-area: title;
   color: #000000;
 }
@@ -425,6 +428,7 @@
   margin: 50px 50px 0 0;
   padding: 0;
   grid-area: foto;
+  max-width: calc(100% - 50px);
 }
 .studyComposition__rules {
   margin: 100px 54px 50px 54px;
@@ -523,6 +527,7 @@
     font-family: "Roboto_regular";
     font-size: 30px;
     line-height: 38px;
+    max-width: calc(100% - 40px);
   }
   .studyComposition__text {
     margin: 0 20px 30px 20px;
@@ -586,9 +591,9 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: #000000;
+  background-color: #78A5A3;
   display: grid;
-  grid-template-areas: "blockName foto" "title foto" "link foto" "feedback1 feedback2" "name1 name2" "mail1 mail2";
+  grid-template-areas: "foto blockName" "foto title " "foto link" "feedback1 feedback2";
 }
 .camera__blockName {
   margin: 50px 0 50px 54px;
@@ -622,9 +627,10 @@
   text-transform: uppercase;
 }
 .camera__foto {
-  margin: 50px 50px 50px 0;
+  margin: 50px 0 50px 50px;
   padding: 0;
   grid-area: foto;
+  max-width: calc(100% - 50px);
 }
 .camera__feedbackText {
   margin: 0 0 60px 50px;
@@ -641,7 +647,7 @@
   grid-area: feedback1;
 }
 .camera__feedbackText_2 {
-  margin: 0 auto 60px 0;
+  margin: 0 auto 60px 50px;
   padding: 0;
   max-width: 497px;
   grid-area: feedback2;
@@ -679,6 +685,7 @@
 
 @media (max-width: 1440px) {
   .camera {
+    padding-bottom: 40px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -700,13 +707,13 @@
   .camera__feedbackText_1 {
     max-width: 469px;
     margin: 0 auto 60px 44px;
-    max-width: 526px;
+    max-width: 75%;
     margin-left: 40px;
   }
   .camera__feedbackText_2 {
     max-width: 469px;
     margin: 0 auto 60px 44px;
-    max-width: 526px;
+    max-width: 75%;
     margin-left: 40px;
   }
   .camera__feedbackName {
@@ -753,6 +760,7 @@
 }
 @media (max-width: 700px) {
   .camera {
+    padding-bottom: 40px;
     max-width: 100%;
   }
   .camera__blockName {
@@ -982,6 +990,7 @@
   padding: 0;
   width: 100%;
   background-color: #CE5A57;
+  padding-bottom: 50px;
 }
 @media (max-width: 1440px) {
   .singUp {
@@ -1025,7 +1034,7 @@
   font-family: "Roboto_regular";
   font-size: 120px;
   line-height: 120px;
-  max-width: 685px;
+  max-width: 70%;
   color: #FFFFFF;
 }
 .singUp__inputs {
@@ -1096,12 +1105,16 @@
   line-height: 24px;
 }
 .singUp__since {
-  margin: 0 auto 50px 50px;
+  margin: 0 auto 0 50px;
   padding: 0;
   font-family: "Roboto_regular";
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 34px;
   color: #FFFFFF;
+}
+.singUp__since:last-of-type {
+  margin: 20px auto 0 50px;
+  padding: 0;
 }
 
 @media (max-width: 1440px) {
@@ -1118,11 +1131,15 @@
     margin: 40px auto 60px 40px;
     font-size: 100px;
     line-height: 100px;
-    max-width: 571px;
+    max-width: 70%;
   }
   .singUp__since {
-    margin: 0 0 40px 40px;
+    margin: 0 0 0 40px;
     align-self: flex-start;
+  }
+  .singUp__since:last-of-type {
+    margin: 10px 0 0 40px;
+    padding: 0;
   }
   .singUp__button {
     max-width: 100%;
@@ -1149,14 +1166,18 @@
     line-height: 50px;
     margin: 0 20px 270px 20px;
     padding: 20px 0 0 0;
+    max-width: 100%;
   }
   .singUp__since {
-    margin: 0 20px 30px 20px;
-    font-size: 14px;
-    line-height: 18px;
-    text-align: left;
-    width: calc(100% - 40px);
-    max-width: none;
+    margin: 0 0 0 20px;
+    align-self: flex-start;
+    font-family: "Roboto_regular";
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .singUp__since:last-of-type {
+    margin: 10px 0 0 20px;
+    padding: 0;
   }
   .singUp__inputs {
     margin: 0;
