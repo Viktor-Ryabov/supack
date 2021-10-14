@@ -67,6 +67,8 @@
     }
   }
   &__since {
+    text-decoration: none;
+    list-style-type: none;
     @include MarginPadding($margin: 0 auto 0 50px);
     @include fontRegular(25px, 34px);
     color: $whiteColor;
