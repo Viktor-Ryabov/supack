@@ -1,4 +1,10 @@
 var swiper = new Swiper(".mySwiper", {
+  autoplay: {
+    delay: 5000,
+  },
+  centeredSlides: true,
+  roundLengths: true,
+  loop: true,
   slidesPerView: 4,
   spaceBetween: 10,
   slidesPerGroup: 1,
