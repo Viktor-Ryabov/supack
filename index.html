@@ -1,158 +1,324 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <title>SUPACK - аутдор еда</title>
-    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-  </head>
-  <body class="page">
-    <header class="header">
-      <a class="header__logoButtonLink" href="#fotoCourse">
-        <img
-          src="./images/Group2.svg"
-          alt="логотип"
-          class="header__logoButton"
-        />
-      </a>
-      <img
-        id="burgerMenuButton"
-        src="./images/buttonBurgerMenu.svg"
-        alt="button"
-        class="header__buttonBurgerMenu"
-      />
-      <ul class="header__list">
-        <li class="header__link">
-          <a id='link1' class="header__links" href="#studyComposition">Идея</a>
-        </li>
-        <li class="header__link">
-          <a id='link2' class="header__links" href="#camera">Отличия</a>
-        </li>
-        <li class="header__link">
-          <a id='link3' class="header__links" href="#singUp">Контакты</a>
-        </li>
-      </ul>
-      <img
-        id="colseIconHeader"
-        src="./images/closeIcon.svg"
-        alt="Закрыть"
-        class="header__closeIcon"
-      />
-    </header>
 
-    <main style="width: 100%">
-      <section class="fotoCourse" id="fotoCourse">
-        <h1 class="fotoCourse__title">SUPACK питание для outdoor</h1>
-        <img
-          src="./images/supack-and-tomatos.jpeg"
-          alt="лес в тумане"
-          class="fotoCourse__foto"
-        />
-        <p class="fotoCourse__text">
-          Мы придумали себе классное питание для отдыха на природе, которое нам
-          очень нравится.
-        </p>
-        <p class="fotoCourse__text2">Теперь мы можем поделиться этим с Вами.</p>
-        <button class="fotoCourse__button" id="firstBlockButton">Консультация</button>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <title>SUPACK - аутдор еда</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-      <section class="camera" id="camera">
-        <p class="camera__blockName">Идея</p>
-        <h3 class="camera__title">Вкусно Удобно Полезно</h3>
-        <img
-          src="./images/supack-2packs.jpeg"
-          alt="густой зеленый лес"
-          class="camera__foto"
-        />
-        <p class="camera__feedbackText camera__feedbackText_1">
-          Блюда упакованы в пищевую вакуумную плёнку, которая не порвётся и не
-          промокнет. В одном пакете - одно блюдо на один прием пищи.
-        </p>
-        <p class="camera__feedbackText camera__feedbackText_2">
-          Блюда расфасованы по порциям на 1 или 2, или 5 человек. Расчитана
-          требуемая каллорийность в зависимости от вида активного отдыха.
-        </p>
-      </section>
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+</head>
 
-      <!-- <section class="searchingOrders" id="searchingOrders">
-        <p class="searchingOrders__blockName">поиск заказов</p>
-        <h3 class="searchingOrders__title">Научим находить заказы!</h3>
-        <img
-          src="./images/дерево-снизу-вверх.png"
-          alt="дерево снизу вверх"
-          class="searchingOrders__foto"
-        />
-        <p class="searchingOrders__text">
-          Мы научим вас искать заказы на всяких фриланс биржах, а когда вы
-          сделаете крутое портфолио, мы поможем найти постоянную работу.
-        </p>
-        <button class="searchingOrders__button">Записаться!</button>
-      </section> -->
+<body class="page">
+  <header class="header">
+    <a class="header__logoButtonLink" href="#fotoCourse">
+      <img src="./images/Group2.svg" alt="логотип" class="header__logoButton" />
+    </a>
+    <img id="burgerMenuButton" src="./images/buttonBurgerMenu.svg" alt="button" class="header__buttonBurgerMenu" />
+    <ul class="header__list">
+      <li class="header__link">
+        <a id='link1' class="header__links" href="#studyComposition">Идея</a>
+      </li>
+      <li class="header__link">
+        <a id='link2' class="header__links" href="#camera">Отличия</a>
+      </li>
+      <li class="header__link">
+        <a id='link3' class="header__links" href="#singUp">Контакты</a>
+      </li>
+    </ul>
+    <img id="colseIconHeader" src="./images/closeIcon.svg" alt="Закрыть" class="header__closeIcon" />
+  </header>
 
-      <section class="studyComposition" id="studyComposition">
-        <p class="studyComposition__blockName">Отличия</p>
-        <h3 class="studyComposition__title">
-          Питание на природе может быть полноценным, а так же вкусным и полезным
-        </h3>
-        <img
-          src="./images/supack-1pack.jpeg"
-          alt="дорога в лесу"
-          class="studyComposition__foto"
-        />
-        <p class="studyComposition__text">
-          Экологичные рецепты на основе круп, овощей, специй и мяса
-          (опционально).
-        </p>
-        <p class="studyComposition__text_2">
-          Можно сделать как отдельные блюда, так и полноценную систему питания (раскладку) на несколько дней. Блюда при этом практически не будут повторяться.
-        </p>
-        <button class="studyComposition__button">Узнать как это?</button>
-        <ul class="studyComposition__rules">
-          <li class="studyComposition__compositionRule">
-            Вес упакованых блюд меньше аналогов, так как овощи и мясо высушены.
-          </li>
-          <li class="studyComposition__compositionRule">
-            Простота: открыл пакет, высыпал в воду, сварил, готово!
-          </li>
-          <li class="studyComposition__compositionRule">
-            Рецепты очень вкусные и не содержат консервантов и усилителей вкуса!
-          </li>
-          <li class="studyComposition__compositionRule">Полноценные продукты лучше сублиматов и продуктов быстрого приготовления</li>
-        </ul>
-      </section>
-    </main>
+  <main style="width: 100%">
+    <section class="fotoCourse" id="fotoCourse">
+      <h1 class="fotoCourse__title">SUPACK питание для outdoor</h1>
+      <img src="./images/supack-and-tomatos.jpeg" alt="лес в тумане" class="fotoCourse__foto" />
+      <p class="fotoCourse__text">
+        Мы придумали себе классное питание для отдыха на природе, которое нам
+        очень нравится.
+      </p>
+      <p class="fotoCourse__text2">Теперь мы можем поделиться этим с Вами.</p>
+      <button class="fotoCourse__button" id="firstBlockButton">Консультация</button>
+    </section>
 
-    <footer class="singUp" id="singUp">
-      <div class="singUp__callToAction">
-        <img
-          src="./images/arrowFooter.svg"
-          alt="стрелочка"
-          class="singUp__arrow"
-        />
-        <h2 class="singUp__h2">Пожалуйста, напишите или позвоните нам.</h2>
-        <!-- <h2 class="singUp__h2">Оставьте почту. Мы свяжемся с Вами.</h2> -->
+    <section class="camera" id="camera">
+      <p class="camera__blockName">Идея</p>
+      <h3 class="camera__title">Вкусно Удобно Полезно</h3>
+      <img src="./images/supack-2packs.jpeg" alt="густой зеленый лес" class="camera__foto" />
+      <p class="camera__feedbackText camera__feedbackText_1">
+        Блюда упакованы в пищевую вакуумную плёнку, которая не порвётся и не
+        промокнет. В одном пакете - одно блюдо на один прием пищи.
+      </p>
+      <p class="camera__feedbackText camera__feedbackText_2">
+        Блюда расфасованы по порциям на 1 или 2, или 5 человек. Расчитана
+        требуемая каллорийность в зависимости от вида активного отдыха.
+      </p>
+    </section>
+
+    <!-- Slider main container -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <article class="card">
+            <div class="card__rectangle">
+              <button
+                aria-label="кнопка удаления карточки"
+                type="button"
+                class="card__delete-button"
+              ></button>
+              <img class="card__foto" src="./images/supack-1pack.jpeg" alt="" />
+              <div class="card__name-like">
+                <h2 class="card__title">Гречка</h2>
+                <button
+                  aria-label="Лайк"
+                  type="button"
+                  class="card__button-like"
+                ></button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="card">
+            <div class="card__rectangle">
+              <button
+                aria-label="кнопка удаления карточки"
+                type="button"
+                class="card__delete-button"
+              ></button>
+              <img class="card__foto" src="./images/supack-1pack.jpeg" alt="" />
+              <div class="card__name-like">
+                <h2 class="card__title">СНОВА Гречка</h2>
+                <button
+                  aria-label="Лайк"
+                  type="button"
+                  class="card__button-like"
+                ></button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="card">
+            <div class="card__rectangle">
+              <button
+                aria-label="кнопка удаления карточки"
+                type="button"
+                class="card__delete-button"
+              ></button>
+              <img class="card__foto" src="./images/supack-1pack.jpeg" alt="" />
+              <div class="card__name-like">
+                <h2 class="card__title">СНОВА Гречка</h2>
+                <button
+                  aria-label="Лайк"
+                  type="button"
+                  class="card__button-like"
+                ></button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="card">
+            <div class="card__rectangle">
+              <button
+                aria-label="кнопка удаления карточки"
+                type="button"
+                class="card__delete-button"
+              ></button>
+              <img class="card__foto" src="./images/supack-1pack.jpeg" alt="" />
+              <div class="card__name-like">
+                <h2 class="card__title">СНОВА Гречка</h2>
+                <button
+                  aria-label="Лайк"
+                  type="button"
+                  class="card__button-like"
+                ></button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="card">
+            <div class="card__rectangle">
+              <button
+                aria-label="кнопка удаления карточки"
+                type="button"
+                class="card__delete-button"
+              ></button>
+              <img class="card__foto" src="./images/supack-1pack.jpeg" alt="" />
+              <div class="card__name-like">
+                <h2 class="card__title">Гречка</h2>
+                <button
+                  aria-label="Лайк"
+                  type="button"
+                  class="card__button-like"
+                ></button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="card">
+            <div class="card__rectangle">
+              <button
+                aria-label="кнопка удаления карточки"
+                type="button"
+                class="card__delete-button"
+              ></button>
+              <img class="card__foto" src="./images/supack-1pack.jpeg" alt="" />
+              <div class="card__name-like">
+                <h2 class="card__title">Гречка</h2>
+                <button
+                  aria-label="Лайк"
+                  type="button"
+                  class="card__button-like"
+                ></button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="card">
+            <div class="card__rectangle">
+              <button
+                aria-label="кнопка удаления карточки"
+                type="button"
+                class="card__delete-button"
+              ></button>
+              <img class="card__foto" src="./images/supack-1pack.jpeg" alt="" />
+              <div class="card__name-like">
+                <h2 class="card__title">Гречка</h2>
+                <button
+                  aria-label="Лайк"
+                  type="button"
+                  class="card__button-like"
+                ></button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="card">
+            <div class="card__rectangle">
+              <button
+                aria-label="кнопка удаления карточки"
+                type="button"
+                class="card__delete-button"
+              ></button>
+              <img class="card__foto" src="./images/supack-1pack.jpeg" alt="" />
+              <div class="card__name-like">
+                <h2 class="card__title">Гречка</h2>
+                <button
+                  aria-label="Лайк"
+                  type="button"
+                  class="card__button-like"
+                ></button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="card">
+            <div class="card__rectangle">
+              <button
+                aria-label="кнопка удаления карточки"
+                type="button"
+                class="card__delete-button"
+              ></button>
+              <img class="card__foto" src="./images/supack-1pack.jpeg" alt="" />
+              <div class="card__name-like">
+                <h2 class="card__title">Гречка</h2>
+                <button
+                  aria-label="Лайк"
+                  type="button"
+                  class="card__button-like"
+                ></button>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
-      <!-- <div class="singUp__inputs">
-        <input
-          name="singUpInput"
-          id="singUpInput"
-          value="Ваша почта"
-          type="text"
-          class="singUp__input"
-        />
-        <button class="singUp__button" id="singUpButton">Оставлю почту</button>
-      </div> -->
-      <a href="tel:+79264218839" class="singUp__since">+7(926)421-8839</p>
-      <a href="mailto:supack-outdoor@yandex.ru?subject=Вопрос по продукции SUPACK" class="singUp__since">supack-outdoor@yandex.ru</a>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+
+    <section class="studyComposition" id="studyComposition">
+      <p class="studyComposition__blockName">Отличия</p>
+      <h3 class="studyComposition__title">
+        Питание на природе может быть полноценным, а так же вкусным и полезным
+      </h3>
+      <img src="./images/supack-1pack.jpeg" alt="дорога в лесу" class="studyComposition__foto" />
+      <p class="studyComposition__text">
+        Экологичные рецепты на основе круп, овощей, специй и мяса
+        (опционально).
+      </p>
+      <p class="studyComposition__text_2">
+        Можно сделать как отдельные блюда, так и полноценную систему питания (раскладку) на несколько дней. Блюда при
+        этом практически не будут повторяться.
+      </p>
+      <button class="studyComposition__button">Узнать как это?</button>
+      <ul class="studyComposition__rules">
+        <li class="studyComposition__compositionRule">
+          Вес упакованых блюд меньше аналогов, так как овощи и мясо высушены.
+        </li>
+        <li class="studyComposition__compositionRule">
+          Простота: открыл пакет, высыпал в воду, сварил, готово!
+        </li>
+        <li class="studyComposition__compositionRule">
+          Рецепты очень вкусные и не содержат консервантов и усилителей вкуса!
+        </li>
+        <li class="studyComposition__compositionRule">Полноценные продукты лучше сублиматов и продуктов быстрого
+          приготовления</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="singUp" id="singUp">
+    <div class="singUp__callToAction">
+      <img src="./images/arrowFooter.svg" alt="стрелочка" class="singUp__arrow" />
+      <h2 class="singUp__h2">Пожалуйста, напишите или позвоните нам.</h2>
+      <!-- <h2 class="singUp__h2">Оставьте почту. Мы свяжемся с Вами.</h2> -->
+    </div>
+    
+    <a href="tel:+79264218839" class="singUp__since">+7(926)421-8839</p>
+      <a href="mailto:supack-outdoor@yandex.ru?subject=Вопрос по продукции SUPACK"
+        class="singUp__since">supack-outdoor@yandex.ru</a>
       <p class="singUp__since">г. Балашиха, МО</p>
       <p class="singUp__since">_______________</p>
       <p class="singUp__since">SUPACK | Since 2019</p>
-    </footer>
+  </footer>
 
-    <template> </template>
+  <template id="newCardTemplate">
+    <article class="card">
+      <div class="card__rectangle">
+        <button
+          aria-label="кнопка удаления карточки"
+          type="button"
+          class="card__delete-button"
+        ></button>
+        <img class="card__foto" src="#" alt="" />
+        <div class="card__name-like">
+          <h2 class="card__title"></h2>
+          <button
+            aria-label="Лайк"
+            type="button"
+            class="card__button-like"
+          ></button>
+        </div>
+      </div>
+    </article>
+  </template>
 
-    <script src="./pages/index.js"></script>
-  </body>
+  <script src="./styles/modules/blocks/card/__initial-сards/cards__initial-сards.js"></script>
+  <script src="./pages/swiper.js"></script>
+  <script src="./pages/index.js"></script>
+</body>
+
 </html>

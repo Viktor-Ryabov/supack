@@ -73,7 +73,6 @@ goToBlock(logo, 0);
 goToBlock(firstBlockButton, 99999999);
 
 const link1 = document.querySelector("#link1 ");
-console.log(link1)
 const link2 = document.querySelector("#link2 ");
 const link3 = document.querySelector("#link3");
 

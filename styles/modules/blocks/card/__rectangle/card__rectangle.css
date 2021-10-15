@@ -1,0 +1,10 @@
+.card__rectangle {
+    margin: 0;
+    padding: 0;
+    
+    border-color: #000;
+    background-color: #fff;
+    border-bottom: #CE5A57 6px solid;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #0000 5%, #fff, #fff);
+}

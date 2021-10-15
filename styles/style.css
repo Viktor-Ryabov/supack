@@ -1,6 +1,13 @@
 @import "../fonts/font.css";
 @import "../styles/modules/blocks/effects/effects_visible.css";
 @import "../styles/modules/blocks/effects/effects_notVisible.css";
+@import "./modules/blocks/cardcard.css";
+@import "./modules/blocks/card/__title/card__title.css";
+@import "./modules/blocks/card/__rectangle/card__rectangle.css";
+@import "./modules/blocks/card/__name-like/card__name-like.css";
+@import "./modules/blocks/card/__foto/card__foto.css";
+@import "./modules/blocks/card/__delete-button/card__delete-button.css";
+@import "./modules/blocks/card/__button-like/card__button-like.css";
 .page {
   margin: 0 auto;
   padding: 0;
@@ -992,16 +999,6 @@
   background-color: #CE5A57;
   padding-bottom: 50px;
 }
-@media (max-width: 1440px) {
-  .singUp {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-    width: 100%;
-  }
-}
 .singUp__callToAction {
   margin: 0;
   padding: 0;
@@ -1011,16 +1008,6 @@
   align-items: flex-start;
   align-content: center;
   width: 100%;
-}
-@media (max-width: 1440px) {
-  .singUp__callToAction {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-    width: 100%;
-  }
 }
 .singUp__arrow {
   margin: 60px 50px 0 50px;
@@ -1213,4 +1200,37 @@
     font-size: 11px;
     line-height: 24px;
   }
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
+.mySwiper {
+  height: 650px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  max-height: 700px;
+  max-width: 340px;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.swiper-button-prev {
+  color: #78A5A3;
 }/*# sourceMappingURL=style.css.map */
