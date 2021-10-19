@@ -1,0 +1,27 @@
+.places__title{
+    margin: 50px 0 40px 48px;
+    padding: 0;
+    font-family: "Roboto_regular";
+    font-size: 100px;
+    line-height: 100%;
+    line-height: 110px;
+    grid-area: title;
+    color: #000000;
+}
+
+@media (max-width: 1439px) {
+    .places__title{
+        margin: 40px auto 60px 40px;
+    }
+}
+
+@media (max-width: 700px) {
+    .places__title{
+        max-width: 282px;
+        margin: 14px auto 60px 20px;
+        font-size: 47px;
+        line-height: 56px;
+    }
+}
+
+

@@ -14,6 +14,58 @@ const listMenu = document.querySelector(".header__list");
 const headerLogo = document.querySelector(".header__logoButtonLink");
 const closeIcon = document.querySelector(".header__closeIcon");
 
+//Секция с карточками
+const cardPlacesSection = document.querySelector('.places');
+
+  //КЛОНИРОВАНИЕ КАРТОЧЕК
+function addCard(name, link) {
+  if ('content' in document.createElement('template')) {
+      const newCardTemplate = document.querySelector('#newCardTemplate').content;
+      let clone = newCardTemplate.cloneNode(true);
+      clone.querySelector('.card__title').innerHTML = name;
+      clone.querySelector('img').src = link;
+      clone.querySelector('img').alt = name;
+      like(clone.querySelector('.card__button-like'));
+      fotoOpen(clone.querySelector('.card__foto'));
+      
+      console.log(clone.querySelector('.card'), clone.querySelector('card__delete-button'));
+      deletCardFunction(clone.querySelector('.card'), clone.querySelector('.card__delete-button'));
+      //popupCloseFunction();
+
+      cardPlacesSection.insertBefore(clone, cardPlacesSection.lastChild);
+  };
+}
+//ДОБАВЛЕНИЕ КАРТОЧЕК НА СТРАНИЦУ
+function cardsAddToPage(massive) {
+  for(let i = 0; i < massive.length; i++) {
+      console.log(massive[i].name, massive[i].link);
+      addCard(massive[i].name, massive[i].link);
+  }
+}
+cardsAddToPage(productCards);
+
+//Функция ЛАЙК
+function like(buttonLike) {
+  buttonLike.addEventListener('click', function() {
+      buttonLike.classList.toggle('card__button-like_active');
+      });
+}
+
+//Функция "большие фото" открыть
+function fotoOpen(imageClick) {
+  imageClick.addEventListener('click', function () {
+      imagePopup.classList.add("effects__open-close");
+      imagePopupFotoBig.src = imageClick.src;
+      imagePopupFotoText.innerHTML = imageClick.alt;
+  });
+}
+
+//УДАЛЕНИЕ КАРТОЧКИ
+function deletCardFunction(card, deletButton){
+  deletButton.addEventListener('click', function(){
+      card.remove();
+  });
+}
 
 
 function addClassList(element, newClassList) {
