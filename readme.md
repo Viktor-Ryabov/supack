@@ -2,3 +2,5 @@
 -
 Контакты
 По любым вопросам ко мне Вы можете отправить электронное письмо: iprva@ya.ru
+-
+repo-page: https://viktor-ryabov.github.io/supack/
